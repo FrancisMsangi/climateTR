@@ -32,7 +32,7 @@ devtools::install_github("FrancisMsangi/climateTR")
 
 ## Example Usage
 
-\###Temporal aggregation
+### Temporal Aggregation
 
 ``` r
 library(climateTR)
@@ -100,18 +100,4 @@ trend_mann
 #> names       : Sens_slope,     pvalue 
 #> min values  :  -3.301863, 0.01382126 
 #> max values  :   3.167313, 1.00000000
-
-#plot the results
-#plot from the regression trend analysis
-plot(trend_reg)
 ```
-
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
-
-``` r
-
-#plot from trend analysis using modified Mann Kendall test
-plot(trend_mann)
-```
-
-<img src="man/figures/README-unnamed-chunk-2-2.png" width="100%" />

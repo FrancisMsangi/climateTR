@@ -36,7 +36,10 @@ devtools::install_github("FrancisMsangi/climateTR")
 
 ## Example Usage
 
-###Temporal aggregation
+
+
+### Temporal Aggregation
+
 ```{r example}
 library(climateTR)
 library(terra)
@@ -55,7 +58,7 @@ r_monthly
 ```
 
 ### Trend Analysis
-```{r,fig.asp=1,out.width="100%"}
+```{r}
 # Generate example raster data for trend analysis
 r_year <- rast(nrows = 10, ncols = 10, nlyrs = 30)
 values(r_year) <- runif(ncell(r_year) * nlyr(r_year)) * 200
@@ -70,12 +73,6 @@ trend_mann <- trend_rast(stacked = r_year, method = "Mann_Kendall")
 trend_reg
 trend_mann
 
-#plot the results
-#plot from the regression trend analysis
-plot(trend_reg)
-
-#plot from trend analysis using modified Mann Kendall test
-plot(trend_mann)
 ```
 
 
