@@ -1,5 +1,5 @@
 ---
-title: "ClimateTR package for temporal aggregation<br>and trend analysis of climate data"
+title: "ClimateTR package for temporal aggregation and\n trend analysis of climate data"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{ClimateTR_vignette}
