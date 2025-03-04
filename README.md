@@ -18,8 +18,7 @@ annual, and seasonal) and perform trend analysis using both parametric
 
 ## Installation
 
-You can install the development version of climateTR from
-[GitHub](https://github.com/) with:
+You can install climateTR from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")

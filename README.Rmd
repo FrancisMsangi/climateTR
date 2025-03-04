@@ -25,7 +25,7 @@ The goal of climateTR is to facilitate temporal aggregation and trend analysis o
 
 ## Installation
 
-You can install the development version of climateTR from [GitHub](https://github.com/) with:
+You can install climateTR from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
