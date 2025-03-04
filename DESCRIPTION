@@ -20,3 +20,4 @@ Imports:
     lubridate,
     modifiedmk,
     terra
+VignetteBuilder: knitr
