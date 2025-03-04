@@ -1,6 +1,6 @@
 Package: climateTR
 Title: Temporal aggregation and Trend analysis of raster time series climate data
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: 
     person("Francis Michael", "Msangi", , "francismich196@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-3663-641X"))
