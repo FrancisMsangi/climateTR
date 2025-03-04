@@ -16,8 +16,6 @@ knitr::opts_chunk$set(
 # climateTR
 
 <!-- badges: start -->
-![Build Status](https://img.shields.io/github/workflow/status/FrancisMsangi/climateTR/CI)
-![Test Coverage](https://img.shields.io/codecov/c/github/FrancisMsangi/climateTR)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/github/v/release/FrancisMsangi/climateTR?logo=github)
 ![Downloads](https://img.shields.io/github/downloads/FrancisMsangi/climateTR/total)
