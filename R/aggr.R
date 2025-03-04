@@ -1,3 +1,36 @@
+#' Temporal aggregation of raster times series climate data
+#'
+#' @param x A SpatRaster of climate time series data
+#' @param agg_type A character value indicating the type of temporal aggregation to perform can either be "days","monthly","annual" or "season"
+#' @param agg_days A numeric value indicating the number of days to conduct "days" aggregation.Default value is NULL.
+#' @param agg_month A vector of numeric values to indicate months of the "season" type aggregation.Example c(10,11,12) will indicate aggregation of season OND(October November December),for overlapping season example a vector c(11,12,1) will mean an aggregation from November current year to January next year(NDJ).Default value is NULL.
+#' @param temp A character value indicating current temporal resolution for 'x'.Can either be "day" for daily data or "month" for monthly data.
+#' @param start A character value to indicate the start date of the raster time series data x in format y-m-d.
+#' @param end A character value to indicate the end date of the raster time series data x in format y-m-d.
+#' @param func The function to be applied. Can be "sum","mean","max","min","sd","median","modal".
+#'
+#' @return A SpatRaster according to the required temporal aggregation
+#' @export
+#'
+#' @examples
+#' library (terra)
+#' set.seed(123)
+#'
+#' # Daily to monthly aggregation for year 2001
+#' r_day <- rast(nrows=10, ncols=10, nlyrs=365)
+#' values(r_day) <- runif(ncell(r_day)*nlyr(r_day))*100
+#' r_monthly<- aggr(r_day,agg_type="monthly",temp="day",start="2001-01-01",end="2001-12-31",func=sum)
+#' r_monthly
+#'
+#' #Aggregating to annual from monthly from 2001 to 2010
+#' r_month<-rast(nrows=10,ncols=10,nlyrs=120)
+#' values(r_month) <- runif(ncell(r_month)*nlyr(r_month))*100
+#'
+#' r_annual<- aggr(r_month,agg_type="annual",temp="month",start="2001-01-01",end="2010-12-31",func=sum)
+#' r_annual
+#'
+#'
+#'
 aggr <- function(x, agg_type, agg_days = NULL, agg_month = NULL, temp, start, end, func) {
   # Assigns time information to the raster stack based on the provided start, end, and time step (temp)
   dt <- seq.Date(as.Date(start), as.Date(end), by = temp)

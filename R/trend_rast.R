@@ -1,3 +1,27 @@
+#' Trend analysis of raster time series climate data
+#'
+#' @param stacked A SpatRaster with several climate layers for Trend analysis
+#' @param method A character value indicating the method to use. Can either be "regression" for linear regression method or "Mann_Kendall" for the modified Mann Kendall test that accounts for autocorrelation using Hamed and Rao (1998) correction with a lag of 3.
+#'
+#' @return A SpatRaster with slope and pvalue
+#' @export
+#'
+#' @examples
+#' library(terra)
+#' set.seed(123)
+#'
+#' #Trend analysis of a 30 years span climate data
+#' r_year <- rast(nrows=10,ncols=10,nlyrs=30)
+#' values(r_year)<- runif(ncell(r_year)* nlyr(r_year)) *200
+#'
+#' # Trend analysis using linear regression
+#' trend_reg<- trend_rast (stacked=r_year, method="regression")
+#' trend_reg
+#'
+#' #Trend analysis using modified Mann Kendall test
+#' trend_mann<- trend_rast(stacked=r_year,method="Mann_Kendall")
+#' trend_mann
+#'
 trend_rast <- function(stacked, method) {
 
   # Function to display a progress bar (similar to terra's style)
