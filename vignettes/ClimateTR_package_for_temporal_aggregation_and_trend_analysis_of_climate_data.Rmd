@@ -28,7 +28,7 @@ library(rasterVis)
 library(RColorBrewer)
 ```
 
-The required package is climateTR and terra. The rasterVis and RColorBrewer package are used here as means to visualize results.
+The required package is climateTR and terra. The rasterVis and RColorBrewer package are used here as means to visualize results
 
 
 ## Data Description
