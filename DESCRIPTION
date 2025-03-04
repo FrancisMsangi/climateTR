@@ -1,10 +1,10 @@
 Package: climateTR
-Title: What the Package Does (One Line, Title Case)
+Title: Temporal aggregation and Trend analysis of raster time series climate data
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Francis Michael", "Msangi", , "francismich196@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-3663-641X"))
+Description: This package performs temporal aggregation of raster times series climate data including days, monthly, annual and seasonal, and performs trend analysis based on a parametric method(linear regression) and non-parametric method (Mann Kendall).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
