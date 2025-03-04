@@ -2,7 +2,7 @@
 title: "ClimateTR package for temporal aggregation <br> and trend_analysis of climate data"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{ClimateTR_package_for_temporal_aggregation_and_trend_analysis_of_climate_data}
+  %\VignetteIndexEntry{ClimateTR_vignette}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
