@@ -1,0 +1,80 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# climateTR
+
+<!-- badges: start -->
+![Build Status](https://img.shields.io/github/workflow/status/FrancisMsangi/climateTR/CI)
+![Test Coverage](https://img.shields.io/codecov/c/github/FrancisMsangi/climateTR)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Version](https://img.shields.io/github/v/release/FrancisMsangi/climateTR?logo=github)
+![Downloads](https://img.shields.io/github/downloads/FrancisMsangi/climateTR/total)
+<!-- badges: end -->
+
+The goal of climateTR is to facilitate temporal aggregation and trend analysis of raster time-series climate data. It allows users to aggregate climate data at different temporal scales (daily, monthly, annual, and seasonal) and perform trend analysis using both parametric (linear regression) and non-parametric (Mann-Kendall) methods
+
+## Installation
+
+You can install the development version of climateTR from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("FrancisMsangi/climateTR")
+```
+
+## Example Usage
+
+###Temporal aggregation:
+
+```{r example}
+library(climateTR)
+library(terra)
+
+# Generate example raster data
+set.seed(123)
+r_day <- rast(nrows = 10, ncols = 10, nlyrs = 365)
+values(r_day) <- runif(ncell(r_day) * nlyr(r_day)) * 100
+
+# Aggregate daily data to monthly
+r_monthly <- aggr(r_day, agg_type = "monthly", temp = "day",
+                  start = "2001-01-01", end = "2001-12-31", func = sum)
+
+# Print summary
+r_monthly
+```
+
+### Trend Analysis
+```{r}
+# Generate example raster data for trend analysis
+r_year <- rast(nrows = 10, ncols = 10, nlyrs = 30)
+values(r_year) <- runif(ncell(r_year) * nlyr(r_year)) * 200
+
+# Apply linear regression trend analysis
+trend_reg <- trend_rast(stacked = r_year, method = "regression")
+
+# Apply Mann-Kendall trend analysis
+trend_mann <- trend_rast(stacked = r_year, method = "Mann_Kendall")
+
+# Print results
+trend_reg
+trend_mann
+
+#plot the results
+plot(trend_reg)
+plot(trend_mann)
+```
+
+
+
