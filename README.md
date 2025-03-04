@@ -103,4 +103,4 @@ trend_mann
 ```
 
 You can view the package vignette
-[here](https://github.com/FrancisMsangi/climateTR/blob/main/doc/ClimateTR_package_for_temporal_aggregation_and_trend_analysis_of_climate_data.html)
+[here](https://github.com/FrancisMsangi/climateTR/tree/master/doc/ClimateTR_package_for_temporal_aggregation_and_trend_analysis_of_climate_data.html)
