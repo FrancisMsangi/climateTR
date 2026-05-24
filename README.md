@@ -7,7 +7,6 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/github/v/release/FrancisMsangi/climateTR?logo=github)
-![Downloads](https://img.shields.io/github/downloads/FrancisMsangi/climateTR/total)
 <!-- badges: end -->
 
 The goal of climateTR is to facilitate temporal aggregation and trend
